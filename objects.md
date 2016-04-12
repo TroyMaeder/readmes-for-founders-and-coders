@@ -28,18 +28,20 @@ var family = {3: "Brothers", 5: "Sisters"};
 console.log(person.firstName); // Ben
 console.log(family.3); // SyntaxError. Does not work.
 ```
+
 Bracket notation:
 
 ```javascript
 console.log(person['firstName']); // Ben
 console.log(family[3]); // Brothers
 ```
+
 Note the required quotation marks around the string when using bracket notation.
 
 Functions stored within objects are referred to as *methods* of the object. To invoke a method of an object we use dot notation along with the parentheses that we normally use when invoking a function:
 
 ```javascript
-var person = {firstName: "Ben", greet: function(){return 'Hello!';}};
+var person = {firstName: "Ben", greet: function() { return "Hello!"; }};
 person.greet(); // Hello
 ```
 
@@ -54,14 +56,14 @@ Object literals can also be spread over more than one line which makes them easi
 
 ```javascript 
 var person = {
-        firstName: "Ben", 
-            lastName: "Howard", 
-                age: 45,
-                    printAge: function() {
-                                console.log("I'm " + this.age + " years old."
-                                    
-                    };
-                    ```
+    firstName: "Ben", 
+    lastName: "Howard", 
+    age: 45,
+    printAge: function() {
+        console.log("I'm " + this.age + " years old.");
+    }
+};
+```
 
 ###The object constructor
 Another way to create objects is with the the _object constructor_. This does the same as the _object literal_ but it uses the `new` keyword to call the constructor:
@@ -79,14 +81,14 @@ Let's say we had ten different persons with different values. Using either of th
 
 ```javascript
 function Person(firstName, lastName, age, profession) {
-        this.firstName = firstName;
-            this.lastName = lastName;
-                this.age = age,
-                    this.profession = profession;
-                        
-                            this.showFullName = function() {
-                                        console.log("My name is " + this.firsName + " " + this.lastName);
-                                            }
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age,
+    this.profession = profession;
+    
+    this.showFullName = function() {
+        console.log("My name is " + this.firsName + " " + this.lastName);
+    }
 }
 ```
 
@@ -99,6 +101,7 @@ var hobbit = new Person("Bilbo", "Baggins", 233, "Coding enthusiast");
 
 hobbit.showFullName();
 ```
+
 As we did with Bilbo we can create as many person objects (or hobbit objects) as we like. 
 
 ##Adding object properties
@@ -106,15 +109,15 @@ Remember that all instances of `Person` will inherit their properties from `Pers
 
 ```javascript
 function Person(firstName, lastName, age, profession, height) {
-        this.firstName = firstName;
-            this.lastName = lastName;
-                this.age = age,
-                    this.profession = profession;
-                        this.height = height;
-                            
-                                this.showFullName = function() {
-                                            console.log("My name is " + this.firsName + " " + this.lastName);
-                                                }
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age,
+    this.profession = profession;
+    this.height = height;
+    
+    this.showFullName = function() {
+        console.log("My name is " + this.firsName + " " + this.lastName);
+    }
 }
 ```
 
@@ -144,4 +147,4 @@ A couple more katas using objects:
 
 ##References
 
-For a more advanced introduction to objects in Javascript, see the articles [Working with objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects) and [Introduction to Object-Oriented Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript) on the Mozilla Development Network..
+For a more advanced introduction to objects in Javascript, see the articles [Working with objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects) and [Introduction to Object-Oriented Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript) on the Mozilla Development Network.

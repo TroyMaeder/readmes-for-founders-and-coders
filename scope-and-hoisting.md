@@ -18,8 +18,8 @@ Unlike most languages which have block-level scope, JavaScript has what is calle
 var myName = "Marty McFly";
 
 function printName(name) {
-        var myName = "Biff Tannen";
-            console.log(myName);
+    var myName = "Biff Tannen";
+    console.log(myName);
 }
 
 printName(); // logs Biff Tannen
@@ -37,8 +37,8 @@ Only inside of the function are we able to access the value `Biff Tannen`, as it
 var name = "Chunk";
 
 if (name) {
-        var name = "Mouth";
-            console.log(name); // logs Mouth
+    var name = "Mouth";
+    console.log(name); // logs Mouth
 }
 
 console.log(name) // logs Mouth
@@ -58,12 +58,12 @@ If we don't declare variables with the `var` keyword, and there is a global vari
 var name = "E.T";
 
 function printAlienName() {
-        console.log(name);  
+    console.log(name);  
 }
 
 function printPersonName() {
-        name = "Elliot";
-            console.log(name);
+    name = "Elliot";
+    console.log(name);
 }
 
 printAlienName(); // logs E.T
@@ -88,8 +88,8 @@ If we declare both a local and global variable with the same name, the local var
 var name = "Han Solo"
 
 function printName(){
-        var name = "R2-D2";
-            console.log(name);
+    var name = "R2-D2";
+    console.log(name);
 }
 
 printName(); // logs R2-D2
@@ -106,7 +106,7 @@ var firstName = "Indiana";
 var lastName = "Jones";
 
 function printFullName() {
-        console.log(firstName + " " + lastName);
+    console.log(firstName + " " + lastName);
 }
 ```
 
@@ -116,12 +116,13 @@ This is how we should run the same code:
 
 ```javascript 
 function printFullName(){
-        var firstName = "Indiana";
-            var lastName = "Jones";
-                
-                    console.log(firstName + " " + lastName);
+    var firstName = "Indiana";
+    var lastName = "Jones";
+
+    console.log(firstName + " " + lastName);
 }
 ```
+
 -
 
 ###Variable Hoisting
@@ -132,9 +133,9 @@ Variable declarations inside of a function are hoisted and delared at the top of
 
 ```javascript
 function printName() {
-        console.log("First Name: " + name);
-            var name = "Miyagi";
-                console.log("Last Name:" + name);
+    console.log("First Name: " + name);
+    var name = "Miyagi";
+    console.log("Last Name:" + name);
 }
 
 printName();
@@ -146,10 +147,11 @@ The variable `name` gets hoisted to the top of the function. It's as if the code
 
 ```javascript
 function printName() {
-        var name;
-            console.log("First Name: " + name);
-                var name = "Miyagi";
-                    console.log("Last Name:" + name);
+    var name;
+    console.log("First Name: " + name);
+
+    var name = "Miyagi";
+    console.log("Last Name:" + name);
 }
 ```
 
@@ -163,7 +165,7 @@ Let's now take a look at how function declaration takes precedence.
 
 ```javascript
 function characterName() {
-        console.log("Daniel");
+    console.log("Daniel");
 }
 
 var characterName;
@@ -177,7 +179,7 @@ Although if we were to assign a value to the variable (variable assignment) then
 var characterName = "Falkor";
 
 function characterName() {
-        console.log("Bastian");
+    console.log("Bastian");
 }
 
 console.log(typeof characterName) // logs string

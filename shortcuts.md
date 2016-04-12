@@ -4,11 +4,11 @@ In this topic we're going to cover a few simple JavaScript shortcuts. Consider t
 
 ```javascript
 function userName(name) {
-        if (!name) {
-                    name = "Not applicable";
-                        }
+    if (!name) {
+        name = "Not applicable";
+    }
 
-                            return name;
+    return name;
 }
 
 console.log(userName("")); // Not applicale
@@ -44,9 +44,9 @@ This much shorter code does the same as the example above:
 
 ```javascript
 function userName(name) {
-        name = name || "Not applicable";
-            
-                return name;
+    name = name || "Not applicable";
+
+    return name;
 }
 
 console.log(userName("")); // Not applicable
@@ -65,10 +65,10 @@ In this `if` statement we check if `driversLicense` is _truthy_, if it is it cal
 
 ```javascript
 if (driversLicense) {
-        registerDriver(driversLicense);
+    registerDriver(driversLicense);
 }
 else {
-        declineDriver(driversLicense);
+    declineDriver(driversLicense);
 }
 ```
 

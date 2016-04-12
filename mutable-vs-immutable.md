@@ -2,7 +2,7 @@
 
 ![Teenage mutant ninja turtles](https://qph.is.quoracdn.net/main-qimg-56e5d36cc0289ab4af84a96db2d05b18?convert_to_webp=true)
 
- In javascript we have primitive types and reference types, which correspond to immutable and mutable types.
+In javascript we have primitive types and reference types, which correspond to immutable and mutable types.
 
 ##Primitive Types
 
@@ -14,15 +14,7 @@
 
 ##Reference Types
 
-- **Object**:
-
-```javascript
-{
-      name: "Ben",
-        age: 20
-}
-```
-
+- **Object**: `{name: "Ben", age: 20}`
 - **Array**: `[23, 4, 55, 9]`
 - **Function**: `myFunction()`
 
@@ -62,11 +54,11 @@ An example with a function call:
 
 ```javascript
 function modifyAge(obj) {
-        obj.age = 10;
+    obj.age = 10;
 }
 
 var sally = {
-      age: 23
+    age: 23
 };
 
 modifyAge(sally);
@@ -102,7 +94,7 @@ An example with a function call:
 
 ```javascript
 function modifyValue(n) {
-        n++;
+    n++;
 }
 
 var age = 53;
